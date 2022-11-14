@@ -6,8 +6,6 @@ public class Ammo : MonoBehaviour
 {
     public float speed;
     public float lifeTime;
-    [SerializeField] GameObject ExplodesOnImpact;
-    [SerializeField] int Damage;
     void Start()
     {
 
@@ -22,15 +20,8 @@ public class Ammo : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.tag != "Ground" && col.gameObject.tag != "Ammo" && col.gameObject.tag != "EnemyBullet")
-        {
-            if (ExplodesOnImpact)
-            {
-                Vector3 Contacto = col.contacts[0].point;
-                Instantiate(ExplodesOnImpact, Contacto, Quaternion.identity);
-            }
-            Destroy(gameObject);
-        }
+        Debug.Log("Col");
+        Destroy(gameObject);
     }
 
 }
