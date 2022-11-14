@@ -1,22 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class HPBar : MonoBehaviour
+public class InterMission : MonoBehaviour
 {
-    [SerializeField] Image Display;
-    public Player PM;
-
     // Start is called before the first frame update
     void Start()
     {
-        Display = GetComponent<Image>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        Display.fillAmount = PM.ActualHealth / PM.Health;
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            SceneManager.LoadScene("Zombies");
+        }
     }
 }

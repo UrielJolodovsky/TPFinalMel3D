@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] public int Health;
-    public int ActualHealth;
+    [SerializeField] public float Health;
+    public float ActualHealth;
     
     
     // Start is called before the first frame update
@@ -20,11 +20,11 @@ public class Player : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerStay(Collider collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            Health--;
+            ActualHealth--;
         }
     }
 }

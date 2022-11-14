@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject bullet;
+    public Transform bulletSpawn = null;
+    public float reloadTime;
+    public float inacuracy;
+    float currReloadTime;
+    AudioSource Sound;
+
+    //bool canShoot = true;
     void Start()
     {
-        
+        currReloadTime = reloadTime;
+        Sound = GetComponent<AudioSource>();
     }
-
-    // Update is called once per frame
     void Update()
     {
-        
+        if (currReloadTime > 0)
+        {
+            currReloadTime -= Time.deltaTime;
+        }
+        if (Input.GetMouseButton(0) && currReloadTime <= 0)
+        {
+            if (Sound)
+            {
+                Sound.Play();
+            }
+            var b = Instantiate(bullet, bulletSpawn.position, bulletSpawn.rotation);
+            b.transform.eulerAngles += new Vector3(Random.Range(-inacuracy, inacuracy), Random.Range(-inacuracy, inacuracy), Random.Range(-inacuracy, inacuracy));
+            currReloadTime = reloadTime;
+        }
     }
 }
