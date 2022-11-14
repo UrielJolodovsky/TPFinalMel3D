@@ -16,7 +16,7 @@ public class Ammo : MonoBehaviour
         transform.position += transform.forward * speed;
     }
 
-    void OnCollisionEnter(Collision col)
+    void OnCollisionEnter()
     {
         Debug.Log("Col");
         Destroy(gameObject);
