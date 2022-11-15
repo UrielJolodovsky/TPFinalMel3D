@@ -6,11 +6,12 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField]
     int Health;
+    WaveManager WM;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        WM = FindObjectOfType<WaveManager>();
     }
 
     // Update is called once per frame
@@ -18,6 +19,7 @@ public class Enemy : MonoBehaviour
     {
         if(Health <= 0)
         {
+            WM.TotalEnemies--;
             Destroy(gameObject);    
         }
     }

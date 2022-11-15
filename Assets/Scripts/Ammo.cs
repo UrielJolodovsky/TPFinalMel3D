@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class Ammo : MonoBehaviour
 {
-    public float speed;
-    public float lifeTime;
+    [SerializeField]
+    float speed;
+
+    [SerializeField]
+    float lifeTime;
+
     void Start()
     {
         Destroy(gameObject, lifeTime);

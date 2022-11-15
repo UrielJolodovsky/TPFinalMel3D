@@ -17,6 +17,7 @@ public class WaveManager : MonoBehaviour
     float ActualTime;
     [SerializeField]
     int Enemies;
+    public int TotalEnemies;
     [SerializeField]
     GameObject Zombie;
     // Start is called before the first frame update
@@ -24,6 +25,7 @@ public class WaveManager : MonoBehaviour
     {
         Enemies = MN.wave * 2;
         ActualTime = Time;
+        TotalEnemies = Enemies;
     }
 
     // Update is called once per frame
@@ -37,12 +39,13 @@ public class WaveManager : MonoBehaviour
         {
             Instantiate(Zombie, S1.transform.position, Quaternion.identity);
             Instantiate(Zombie, S2.transform.position, Quaternion.identity);
+            Enemies -= 2;
             ActualTime = Time;
         }
-        if(Enemies <= 0)
+        if(TotalEnemies <= 0)
         {
-            SceneManager.LoadScene("Shop");
             MN.wave++;
+            SceneManager.LoadScene("Shop");
         }
     }
 }
