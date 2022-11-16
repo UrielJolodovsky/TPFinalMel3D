@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3731193, g: 0.38073996, b: 0.35872698, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -474,7 +474,7 @@ MonoBehaviour:
   MN: {fileID: 11400000, guid: c4ecda7740f43f945ad80b6fc371ef66, type: 2}
   S1: {fileID: 274914006}
   S2: {fileID: 1771533460}
-  Time: 300
+  Time: 150
   ActualTime: 0
   Enemies: 2
   TotalEnemies: 0
@@ -10181,14 +10181,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106984287}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -9.715763e-17, y: 0.7933523, z: 9.715764e-17, w: 0.60876286}
   m_LocalPosition: {x: -0.0000012207031, y: 0.0034845162, z: -0.045827024}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1107075231}
   m_Father: {fileID: 1107075393}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 105.00001, z: 0}
 --- !u!1 &1157809820
 GameObject:
   m_ObjectHideFlags: 0
@@ -10274,7 +10274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!108 &1259170852
 Light:
   m_ObjectHideFlags: 0
@@ -10376,6 +10376,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 742636086256032230, guid: 8649703996ff9de4fb14f8c301dd5a86,
+        type: 3}
+      propertyPath: reloadTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 742636086256032230, guid: 8649703996ff9de4fb14f8c301dd5a86,
+        type: 3}
+      propertyPath: inacuracy
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 1154018219608341000, guid: 8649703996ff9de4fb14f8c301dd5a86,
         type: 3}
       propertyPath: m_LocalPosition.x
