@@ -7,6 +7,12 @@ TagManager:
   - post
   - Ammo
   - Enemy
+  - mesa
+  - Silla
+  - Vendedor1
+  - Vendedor2
+  - Vendedor3
+  - Vendedor4
   layers:
   - Default
   - TransparentFX
