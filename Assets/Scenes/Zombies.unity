@@ -111,7 +111,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 136f7d9021e748046a831f49e5abeb66, type: 2}
 --- !u!1 &86514349
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,6 +477,7 @@ MonoBehaviour:
   Time: 300
   ActualTime: 0
   Enemies: 2
+  TotalEnemies: 0
   Zombie: {fileID: 2053505136957513071, guid: ce27f9509df130b45b580fc9be99690a, type: 3}
 --- !u!4 &580985932
 Transform:

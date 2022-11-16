@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    
+    [SerializeField] Money MN;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.T))

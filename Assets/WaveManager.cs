@@ -44,6 +44,7 @@ public class WaveManager : MonoBehaviour
         }
         if(TotalEnemies <= 0)
         {
+            MN.money += 20;
             MN.wave++;
             SceneManager.LoadScene("Shop");
         }
