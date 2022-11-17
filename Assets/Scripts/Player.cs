@@ -31,7 +31,10 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             ActualHealth--;
-            
+            if (ActualHealth <= -1)
+            {
+                Time.timeScale = 0;
+            }
         }
     }
 }
