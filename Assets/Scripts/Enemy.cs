@@ -26,9 +26,25 @@ public class Enemy : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.CompareTag("Ammo"))
+        if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 0)
         {
             Health--;
+        }
+        if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 1)
+        {
+            Health-= 2;
+        }
+        if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 2)
+        {
+            Health-= 3;
+        }
+        if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 3)
+        {
+            Health-= 4;
+        }
+        if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 4)
+        {
+            Health-= 5;
         }
     }
 }
