@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class BuyGun : MonoBehaviour
 {
     int vendedor = 0;
-    public static int armaUsar;
+    public static int armaUsar = 0;
     Text comprarArma;
     // luego en el start de la escena Zombies ponemos que si armaUsar es un valor, solo se visibilice el arma correspondiente
     // Start is called before the first frame update
@@ -20,19 +20,19 @@ public class BuyGun : MonoBehaviour
     {
         if (vendedor == 1 && Input.GetKeyDown(KeyCode.Q))
         {
-
+            armaUsar = 1;
         }
         else if (vendedor == 2 && Input.GetKeyDown(KeyCode.Q))
         {
-
+            armaUsar = 2;
         }
         else if (vendedor == 3 && Input.GetKeyDown(KeyCode.Q))
         {
-
+            armaUsar = 3;
         }
         else if (vendedor == 4 && Input.GetKeyDown(KeyCode.Q))
         {
-
+            armaUsar = 4;
         }
     }
     void OnTriggerStay(Collider other)
