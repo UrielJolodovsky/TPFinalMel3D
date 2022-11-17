@@ -17,34 +17,35 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Health <= 0)
+        if (Health <= 0)
         {
             WM.TotalEnemies--;
-            Destroy(gameObject);    
+            Destroy(gameObject);
         }
     }
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 0)
-        {
-            Health--;
-        }
+        if (col.gameObject.CompareTag("Ammo"))
+            if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 0)
+            {
+                Health--;
+            }
         if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 1)
         {
-            Health-= 2;
+            Health -= 2;
         }
         if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 2)
         {
-            Health-= 3;
+            Health -= 3;
         }
         if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 3)
         {
-            Health-= 4;
+            Health -= 4;
         }
         if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 4)
         {
-            Health-= 5;
+            Health -= 5;
         }
     }
 }
