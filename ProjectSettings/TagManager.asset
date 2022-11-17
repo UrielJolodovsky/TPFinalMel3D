@@ -13,6 +13,8 @@ TagManager:
   - Vendedor2
   - Vendedor3
   - Vendedor4
+  - ComprarArma
+  - Gun
   layers:
   - Default
   - TransparentFX
