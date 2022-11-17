@@ -28,19 +28,23 @@ public class Enemy : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 1)
         {
-            Health--;
-        }
-        if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 2)
-        {
             Health-= 2;
         }
-        if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 3)
+        else if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 2)
         {
             Health-= 3;
         }
-        if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 4)
+        else if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 3)
         {
             Health-= 4;
+        }
+        else if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 4)
+        {
+            Health-= 5;
+        }
+        else if (col.gameObject.CompareTag("Ammo"))
+        {
+            Health --;
         }
     }
 }
