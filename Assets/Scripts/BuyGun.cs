@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BuyGun : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class BuyGun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        comprarArma = GameObject.FindGameObjectWithTag("ComprarArma").GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -34,7 +35,7 @@ public class BuyGun : MonoBehaviour
             armaUsar = 4;
         }
     }
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Vendedor1")
         {
@@ -52,9 +53,11 @@ public class BuyGun : MonoBehaviour
         {
             vendedor = 4;
         }
+        comprarArma.enabled = true;
     }
     void OnTriggerExit(Collider other)
     {
         vendedor = 0;
+        comprarArma.enabled = false;
     }
 }

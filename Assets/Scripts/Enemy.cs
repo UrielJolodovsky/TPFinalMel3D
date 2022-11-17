@@ -26,6 +26,13 @@ public class Enemy : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
+<<<<<<< HEAD
+=======
+        if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 0)
+        {
+            Health--;
+        }
+>>>>>>> parent of b92c63f (Merge branch 'win-branch')
         if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 1)
         {
             Health-= 2;
@@ -41,10 +48,13 @@ public class Enemy : MonoBehaviour
         else if (col.gameObject.CompareTag("Ammo") && BuyGun.armaUsar == 4)
         {
             Health-= 5;
+<<<<<<< HEAD
         }
         else if (col.gameObject.CompareTag("Ammo"))
         {
             Health --;
+=======
+>>>>>>> parent of b92c63f (Merge branch 'win-branch')
         }
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10463,6 +10463,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 742636085025838849, guid: 8649703996ff9de4fb14f8c301dd5a86,
+        type: 3}
+      propertyPath: m_TagString
+      value: Gun
+      objectReference: {fileID: 0}
     - target: {fileID: 742636086256032230, guid: 8649703996ff9de4fb14f8c301dd5a86,
         type: 3}
       propertyPath: reloadTime
@@ -10533,8 +10538,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPSController posprosesin
       objectReference: {fileID: 0}
-<<<<<<< Updated upstream
-=======
     - target: {fileID: 2099271164916975563, guid: 8649703996ff9de4fb14f8c301dd5a86,
         type: 3}
 <<<<<<< Updated upstream
@@ -10550,7 +10553,6 @@ PrefabInstance:
       propertyPath: post
       value: 
       objectReference: {fileID: 1277263206}
->>>>>>> Stashed changes
 >>>>>>> Stashed changes
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8649703996ff9de4fb14f8c301dd5a86, type: 3}
