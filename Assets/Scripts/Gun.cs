@@ -33,10 +33,6 @@ public class Gun : MonoBehaviour
             b.transform.eulerAngles += new Vector3(Random.Range(-inacuracy, inacuracy), Random.Range(-inacuracy, inacuracy), Random.Range(-inacuracy, inacuracy));
             currReloadTime = reloadTime;
         }
-        if (BuyGun.armaUsar == 0)
-        {
-            // Arma negra
-        }
         if (BuyGun.armaUsar == 1)
         {
             // Arma azul
