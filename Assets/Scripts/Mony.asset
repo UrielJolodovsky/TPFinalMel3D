@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1acc1b93168b5f94d80e5f5d11b7c739, type: 3}
   m_Name: Mony
   m_EditorClassIdentifier: 
-  wave: 1
+  wave: 0
   money: 0

@@ -48,7 +48,7 @@ public class WaveManager : MonoBehaviour
             MN.wave++;
             SceneManager.LoadScene("Shop");
         }
-        if(MN.wave >= 5)
+        if(MN.wave >= 7)
         {
             SceneManager.LoadScene("Win");
         }
