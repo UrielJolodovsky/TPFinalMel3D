@@ -51,19 +51,19 @@ public class Gun : MonoBehaviour
         }
         if (BuyGun.armaUsar == 1)
         {
-            // Arma azul
+            // Arma Verde
         }
         if (BuyGun.armaUsar == 2)
         {
-            // Arma verde
+            // Arma Aul
         }
         if (BuyGun.armaUsar == 3)
         {
-            // Arma roja
+            // Arma Roja
         }
         if (BuyGun.armaUsar == 4)
         {
-            // Arma color epico
+            // Arma Amarilla
         }
     }
 }

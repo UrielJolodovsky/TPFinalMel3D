@@ -15,6 +15,15 @@ TagManager:
   - Vendedor4
   - ComprarArma
   - Gun
+  - Vendedor1Foto
+  - Vendedor2Foto
+  - Vendedor3Foto
+  - Vendedor4Foto
+  - Dinero
+  - Puerta
+  - ArmasBasicas
+  - Armas2
+  - ArmaActual
   layers:
   - Default
   - TransparentFX
