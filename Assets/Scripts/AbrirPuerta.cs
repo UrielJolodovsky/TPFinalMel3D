@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class AbrirPuerta : MonoBehaviour
 {
     [SerializeField] bool Abrible;
-    [SerializeField] bool Abrierta;
+    [SerializeField] bool Abierta;
     [SerializeField] public Text RangoAbrir;
     [SerializeField] public BoxCollider TriggerCollider;
 
@@ -27,13 +27,17 @@ public class AbrirPuerta : MonoBehaviour
                GetComponent<Animator>().SetBool("Abierta", true);
                RangoAbrir.enabled = false;
                TriggerCollider.enabled = false;
+                Abierta = true;
             }
         }
     }
     void OnTriggerStay()
     {
-        Abrible = true;
-        RangoAbrir.enabled = true;
+        if (!Abierta)
+        {
+            Abrible = true;
+            RangoAbrir.enabled = true;
+        }
     }
     void OnTriggerExit()
     {

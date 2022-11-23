@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
+    [SerializeField] Money MN;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +19,10 @@ public class ChangeScene : MonoBehaviour
     }
     public void LoadScene() 
     {
-
-        SceneManager.LoadScene("Zombies");
+        MN.wave = 1;
+        MN.money = 0;
+        BuyGun.armaUsar = 0;
+        SceneManager.LoadScene("Shop");
         
     }
 }

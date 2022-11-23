@@ -59,6 +59,40 @@ public class BuyGun : MonoBehaviour
             Vendedor3Foto.SetActive(false);
             Vendedor4Foto.SetActive(false);*/
         }
+        /*if(armaUsar == 1)
+        {
+            //Vendedor1.SetActive(false);
+            comprarArma.enabled = false;
+            Vendedor1Foto.SetActive(true);
+            Arma0.SetActive(false);
+        }
+        else if(armaUsar == 2)
+        {
+            //Vendedor2.SetActive(false);
+            comprarArma.enabled = false;
+            Vendedor2Foto.SetActive(true);
+            Vendedor1Foto.SetActive(false);
+            Arma0.SetActive(false);
+        }
+        else if(armaUsar == 3)
+        {
+            //Vendedor3.SetActive(false);
+            comprarArma.enabled = false;
+            Vendedor3Foto.SetActive(true);
+            Vendedor2Foto.SetActive(false);
+            Vendedor1Foto.SetActive(false);
+            Arma0.SetActive(false);
+        }
+        else if(armaUsar == 4)
+        {
+            //Vendedor4.SetActive(false);
+            comprarArma.enabled = false;
+            Vendedor4Foto.SetActive(true);
+            Vendedor3Foto.SetActive(false);
+            Vendedor2Foto.SetActive(false);
+            Vendedor1Foto.SetActive(false);
+            Arma0.SetActive(false);
+        }*/
         Dinero.text = "Dinero actual: " + MN.money.ToString() + " $";
         ArmaActual.text = "El nivel de tu arma actual es: " + armaUsar.ToString();
         if (vendedor == 1)
@@ -66,7 +100,7 @@ public class BuyGun : MonoBehaviour
             if (MN.money >= 10)
             {
                 comprarArma.text = "Presiona Q para comprar el arma" + "\n" + "Precio: 10 $";
-                if (armaUsar <= 1)
+                if (armaUsar <= 1 || armaUsar == 1)
                 {
                     if (Input.GetKeyDown(KeyCode.Q))
                     {
@@ -92,7 +126,7 @@ public class BuyGun : MonoBehaviour
             {
                 comprarArma.text = "Presiona Q para comprar el arma" + "\n" + "Precio: 30 $";
                 comprable = true;
-                if (armaUsar <= 2)
+                if (armaUsar <= 2 || armaUsar == 2)
                 {
                     if (Input.GetKeyDown(KeyCode.Q))
                     {
@@ -113,7 +147,7 @@ public class BuyGun : MonoBehaviour
             else
                 comprarArma.text = "No tienes suficiente dinero";
         }
-        else if (vendedor == 3)
+        else if (vendedor == 3 || armaUsar == 3)
         {
             if (MN.money >= 50)
             {
@@ -142,7 +176,7 @@ public class BuyGun : MonoBehaviour
             else
                 comprarArma.text = "No tienes suficiente dinero";
         }
-        else if (vendedor == 4)
+        else if (vendedor == 4 || armaUsar == 4)
         {
             if (MN.money >= 70)
             {
