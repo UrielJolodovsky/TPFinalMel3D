@@ -12,6 +12,7 @@ public class HPBar : MonoBehaviour
     void Start()
     {
         Display = GetComponent<Image>();
+        PM = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame

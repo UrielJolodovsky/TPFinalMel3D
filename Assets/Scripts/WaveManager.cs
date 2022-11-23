@@ -20,12 +20,15 @@ public class WaveManager : MonoBehaviour
     public int TotalEnemies;
     [SerializeField]
     GameObject Zombie;
+    [SerializeField]
+    GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         Enemies = MN.wave * 2;
         ActualTime = Time;
         TotalEnemies = Enemies;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -46,7 +49,9 @@ public class WaveManager : MonoBehaviour
         {
             MN.money += 20;
             MN.wave++;
+            player.transform.position = BuyGun.spawn;
             SceneManager.LoadScene("Shop");
+            
         }
         if(MN.wave >= 7)
         {

@@ -24,6 +24,7 @@ TagManager:
   - ArmasBasicas
   - Armas2
   - ArmaActual
+  - Arma0
   layers:
   - Default
   - TransparentFX

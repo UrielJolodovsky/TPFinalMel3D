@@ -41,7 +41,7 @@ public class Gun : MonoBehaviour
             // Seria posible instanciar 2? Asi el bloom no queda raro. 
             b.transform.eulerAngles += new Vector3(Random.Range(-inacuracy, inacuracy), Random.Range(-inacuracy, inacuracy), Random.Range(-inacuracy, inacuracy));
             currReloadTime = reloadTime;
-            bloom.intensity.value = 10;
+            bloom.intensity.value = 30;
             counter += .09f;
             if(counter >= .1f) 
             {
